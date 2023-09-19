@@ -17,9 +17,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
 import org.testng.annotations.DataProvider;
-
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -62,7 +60,7 @@ public class Base {
 	@DataProvider(name = "AllDatagetter")
 	public Object[][] AllDatagetter() throws IOException {
 
-		File f = new File("C:\\Users\\dell\\Desktop\\DataFile.xlsx");
+		File f = new File("C:\\Users\\ABINANDH\\Desktop\\DataFile.xlsx");
 
 		FileInputStream fis = new FileInputStream(f);
 
@@ -84,7 +82,7 @@ public class Base {
 			Cell Fname = row.getCell(2);
 			Cell lname = row.getCell(3);
 			Cell userpass = row.getCell(4);
-			Cell confirm = row.getCell(4);
+			Cell confirm = row.getCell(5);
 
 			data[i - 1][0] = userEmail.getStringCellValue();
 			data[i - 1][1] = username.getStringCellValue();
@@ -101,7 +99,7 @@ public class Base {
 		return data;
 
 	}
-	
+
 	public static void loggerInfo() {
 		Logger logging = Logger.getLogger(Base.class.getName());
 		logging.setLevel(Level.INFO);

@@ -28,10 +28,10 @@ public class DataDrivenTest extends Base {
 
 	@BeforeClass
 	public void setup() {
-		htmlReport = new ExtentHtmlReporter(System.getProperty("user.dir")+ "/test-output/testReport.html");
+		htmlReport = new ExtentHtmlReporter(System.getProperty("user.dir")+ "/test-output/testReportexcel.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReport);
-		htmlReport.config().setChartVisibleOnOpen(true);
+		htmlReport.config().setChartVisibilityOnOpen(true);
 		htmlReport.config().setDocumentTitle("Data Driven");
 		htmlReport.config().setReportName("Report Data");
 		htmlReport.config().setTheme(Theme.DARK);
